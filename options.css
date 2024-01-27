@@ -1,0 +1,50 @@
+body{
+    width: 720px;
+    height: 512px;
+    background-color: #48BF84;
+}
+
+.container{
+    padding: 16px;
+}
+
+.head {
+    color: #fff;
+}
+
+.text-logo {
+    color: #439775;
+    font-size: 16px;
+}
+
+.text-title {
+    color: #fff;
+}
+
+.text-item {
+    color: #439775;
+}
+
+.input-main {
+    padding: 16px;
+    width: 500px;
+    background-color: #FFFFFF;
+    border-style: none;
+    border-radius: 15px;
+    color: #439775;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    text-align: center;
+}
+
+.text-fox {
+    color: #308160;
+}

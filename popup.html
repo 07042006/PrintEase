@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrintEase: Extensão Automatizada de Impressão no Chrome</title>
+
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="head">
+            <h1 class="text-logo">PrintEase: Extensão Automatizada de Impressão no Chrome</h1>
+        </div>
+        <div class="body">
+            <h2 class="text-title">Configuração da extensão</h2>
+
+            <!-- Escolha uma impressora padrão -->
+            <div class="item">
+                <h3 class="text-item">Escolha uma impressora padrão</h3>
+                <select id="impressoraPadrao" class="input-main" name="impressora"></select>
+            </div>
+
+            <!-- Escolha uma margem padrão -->
+            <div class="item">
+                <h3 class="text-item">Escolha uma margem padrão</h3>
+                <select id="margemPadrao" class="input-main" name="margem"></select>
+            </div>
+
+            <!-- Quantidade de cópias padrão -->
+            <div class="item">
+                <h3 class="text-item">Quantidade de cópias padrão</h3>
+                <input id="quantidadeCopiasPadrao" class="input-main" type="text">
+            </div>
+
+            <!-- Páginas por folhas padrão -->
+            <div class="item">
+                <h3 class="text-item">Páginas por folhas padrão</h3>
+                <select id="pagesPerSheetPadrao" class="input-main" name="pagesPerSheet"></select>
+            </div>
+
+            <!-- Tamanho do papel padrão -->
+            <div class="item">
+                <h3 class="text-item">Tamanho do papel padrão</h3>
+                <select id="tamanhoPapelPadrao" class="input-main" type="text">
+            </div>
+
+            <!-- Páginas por folha padrão -->
+            <div class="item">
+                <h3 class="text-item">Páginas por folha padrão</h3>
+                <select id="paginasPorFolhaPadrao" class="input-main" type="text">
+            </div>
+
+            <!-- Opções Extras -->
+            <div class="item">
+                <h3 class="text-item">Opções Extras</h3>
+
+                <form action="#">
+
+                <input type="checkbox" id="optionHeaderAndFooter" name="preferencia1">
+                <label for="preferencia1">Cabeçalho e Rodapé</label><br>
+    
+                <input type="checkbox" id="optionBackgroundGraphics" name="preferencia2">
+                <label for="preferencia2">Gráficos de segundo plano</label><br>
+
+            </div>
+
+    </form>
+
+        </div>
+        <div class="footer">
+            <div class="content">
+                <h3 class="text-item">Desenvolvido por <span class="text-fox">Fox Devs</span></h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="options.js"></script>
+</body>
+</html>
