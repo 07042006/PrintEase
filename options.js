@@ -16,6 +16,38 @@ marginsOptions = {
     ]
 }
 
+/* Ativar e Desativar robô */
+
+// Verifica se a extensão está ligada ou desligada
+let isExtensionEnabled = localStorage.getItem('extensionEnabled');
+
+// Se o estado não estiver definido, padrão é ligado
+if (isExtensionEnabled === null) {
+    isExtensionEnabled = true; // padrão é ligado
+    localStorage.setItem('extensionEnabled', true);
+} else {
+    isExtensionEnabled = JSON.parse(isExtensionEnabled); // converte para boolean
+}
+
+if(isExtensionEnabled){
+    document.getElementById("statusExtension").innerText = "Extensão: Ligado";
+}else{
+    document.getElementById("statusExtension").innerText = "Extensão: Desligado";
+}
+
+// Função para alternar entre ligado e desligado
+function toggleExtension() {
+    isExtensionEnabled = !isExtensionEnabled;
+    localStorage.setItem('extensionEnabled', isExtensionEnabled);
+    if(isExtensionEnabled){
+        document.getElementById("statusExtension").innerText = "Extensão: Ligado";
+    }else{
+        document.getElementById("statusExtension").innerText = "Extensão: Desligado";
+    }
+}
+
+document.getElementById("toggleButton").addEventListener("click", toggleExtension)
+
 /* Add options - paperSizeOptions */
 const selectTamanhoPapelPadraoElement = document.getElementById('tamanhoPapelPadrao');
 paperSizeOptions.options.forEach(option => {
