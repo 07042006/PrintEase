@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressão Automática de PDF</title>
+    <script>
+        function imprimirPDF() {
+            // Crie um elemento iframe
+            var iframe = document.createElement('iframe');
+            iframe.style.display = 'none';
+
+            // URL do PDF que você quer imprimir
+            var pdfUrl = 'caminho_para_seu_arquivo.pdf';
+
+            // Carregue o PDF no iframe
+            iframe.src = pdfUrl;
+
+            // Anexe o iframe ao corpo do documento
+            document.body.appendChild(iframe);
+
+            // Espere um pouco antes de iniciar a impressão
+            setTimeout(function() {
+                iframe.contentWindow.print();
+            }, 1000);
+        }
+    </script>
+</head>
+<body>
+    <h1>Impressão Automática de PDF</h1>
+    <p>Clique no botão abaixo para aprovar e imprimir automaticamente o PDF.</p>
+    <button class="button-printer" onclick="imprimirPDF()">Aprovar e Imprimir Automático</button>
+</body>
+</html>
